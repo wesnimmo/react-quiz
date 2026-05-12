@@ -1,5 +1,5 @@
-{
-  "questions": [
+
+  [
     {
       "question": "Which is the most popular JavaScript framework?",
       "options": ["Angular", "React", "Svelte", "Vue"],
@@ -135,5 +135,5 @@
       "correctOption": 3,
       "points": 20
     }
-  ]
-}
+ ]
+

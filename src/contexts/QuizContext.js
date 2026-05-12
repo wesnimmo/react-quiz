@@ -1,5 +1,5 @@
 import { createContext, useContext, useReducer, useEffect } from "react";
-
+import questionsData from "../data/questions.json";
 const QuizContext = createContext();
 
 const SECS_PER_QUESTION = 30;
@@ -81,12 +81,13 @@ function QuizProvider({ children }) {
     0
   );
 
-  useEffect(function () {
-    fetch("/api/questions")
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch((err) => dispatch({ type: "dataFailed" }));
-  }, []);
+useEffect(function () {
+  try {
+    dispatch({ type: "dataReceived", payload: questionsData });
+  } catch (err) {
+    dispatch({ type: "dataFailed" });
+  }
+}, []);
 
   console.log('Here are the questions-->', questions)
 
