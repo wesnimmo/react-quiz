@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# React Quiz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+React Quiz is a sandbox React project built to explore reusable quiz and assessment features for a much larger educational LMS platform currently in development. The long-term goal of the platform is to teach students coding and technology concepts through interactive academic content and historical learning modules.
 
-In the project directory, you can run:
+This project focuses specifically on building a modular quiz system using React state management patterns, reusable UI components, timed assessments, and scalable architecture that can later be integrated into a larger Next.js application.
 
-### `npm start`
+## Goals of the Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project was created to practice and better understand:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React component architecture
+- `useReducer` state management
+- Refactoring reducer logic into the Context API
+- Building reusable quiz components
+- Conditional rendering patterns
+- Timers and score tracking
+- Managing global application state with custom hooks
+- Preparing React applications for deployment
 
-### `npm test`
+The original version of the application managed all quiz logic directly inside the `App` component using `useReducer`. The project was later refactored to move quiz state into a dedicated `QuizContext` provider with a custom `useQuiz()` hook to create a cleaner and more scalable architecture.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- Timed quiz functionality
+- Dynamic question rendering
+- Score tracking
+- High score tracking
+- Progress indicator
+- Restart quiz functionality
+- Global state management using Context API
+- Modular reusable React components
+- Static JSON-based question data
+- Responsive UI
+- Deployed to Vercel
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Demo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Live App**: https://react-quiz-swart-eight.vercel.app/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `npm run eject`
+- React
+- Context API
+- useReducer
+- JavaScript (ES6+)
+- CSS
+- Vercel
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Architecture Notes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The current version uses static JSON data imported directly into the React application. Earlier versions used `json-server` and API fetching during development, but the project was later simplified for deployment and portability.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project is part of a broader collection of educational UI experiments, including modal-based historical player cards and interactive learning dashboards, which will eventually combine into a larger LMS platform built with Next.js.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The goal of these smaller projects is to prototype reusable educational components before integrating them into the larger production platform.
 
-## Learn More
+## Future Plans
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Convert the quiz system into a reusable assessment component
+- Add category-based quizzes
+- Persist user progress and scores
+- Add animations and transitions
+- Integrate quizzes into larger educational learning modules
+- Connect quizzes with historical and coding lesson content
+- Migrate features into a larger production LMS platform
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Local Development
 
-### Code Splitting
+Clone the repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+git clone https://github.com/wesnimmo/react-quiz.git
+```
 
-### Analyzing the Bundle Size
+Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm install
+```
 
-### Making a Progressive Web App
+Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm start
+```
 
-### Advanced Configuration
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built by Wesley Nimmo as part of an ongoing educational LMS and front-end development initiative.
