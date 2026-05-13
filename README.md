@@ -65,6 +65,8 @@ The goal of these smaller projects is to prototype reusable educational componen
 - Integrate quizzes into larger educational learning modules
 - Connect quizzes with historical and coding lesson content
 - Migrate features into a larger production LMS platform
+- LMS will be built using v0 (by Vercel) as the primary engine for rapid UI prototyping, component scaffolding
+- LMS also will use Claude (by Anthropic):** Used for deep architectural logic, complex state management, custom hooks
 
 ## Local Development
 
